@@ -1,4 +1,4 @@
-import CategoryItem from '../category-item/category-item.component';
+import DirectoryItem from '../directory-item/directory-item.component';
 
 import './directory.styles.scss';
 
@@ -8,27 +8,32 @@ const Directory = () => {
         {
           "id": 1,
           "title": "hats",
-          "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+          "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
+          "route": 'shop/hats'
         },
         {
           "id": 2,
           "title": "jackets",
-          "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+          "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
+          "route": 'shop/jackets'
         },
         {
           "id": 3,
           "title": "sneakers",
-          "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+          "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
+          "route": 'shop/sneakers'
         },
         {
           "id": 4,
-          "title": "womens",
-          "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+          "title": "women",
+          "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png",
+          "route": 'shop/women'
         },
         {
           "id": 5,
-          "title": "mens",
-          "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+          "title": "men",
+          "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
+          "route": 'shop/men'
         }
       ]
        
@@ -36,9 +41,8 @@ const Directory = () => {
         <div className='directory-container'>        
             {
               categories.map((category, index) => (
-                <div key={index} className='category-container'>
-                  <CategoryItem category={category}/>
-                </div>))
+                  <DirectoryItem key={index}  category={category}/>
+               ))
             }
         </div>
       );
